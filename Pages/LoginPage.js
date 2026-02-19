@@ -6,7 +6,7 @@ class LoginPage extends BasePage {
     this.usernameInput = page.locator('#user-name');
     this.passwordInput = page.locator('[data-test="password"]');
     this.loginButton = page.locator('[data-test="login-button"]');
-    this.errorMessage = page.locator('/html/body/div[1]/div/div[2]/div[1]/div/div/form/div[3]/h3');
+    this.errorMessage = page.locator('[data-test="error"]');
   }
 
   async login(username, password) {
