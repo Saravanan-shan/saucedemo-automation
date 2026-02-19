@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const LoginPage = require('../pages/LoginPage');
 const InventoryPage = require('../pages/InventoryPage');
 const fs = require('fs');
-const parse = require('csv-parse/sync');  // For data-driven bonus
+const { parse } = require('csv-parse/sync');  // For data-driven bonus
 
 // Bonus: Data-driven from CSV
 const loginData = parse(fs.readFileSync('data/loginData.csv', 'utf-8'), {
