@@ -1,0 +1,5 @@
+scenario,username,password,expectedOutcome,errorMessage
+positive,standard_user,secret_sauce,success,
+negative_locked,locked_out_user,secret_sauce,error,Epic sadface: Sorry, this user has been locked out.
+negative_invalid,invalid_user,secret_sauce,error,Epic sadface: Username and password do not match any user in this service
+edge_empty,,secret_sauce,error,Epic sadface: Username is required
