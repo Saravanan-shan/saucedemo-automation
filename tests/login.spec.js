@@ -5,9 +5,17 @@ const fs = require('fs');
 const { parse } = require('csv-parse/sync');  // For data-driven bonus
 
 // Bonus: Data-driven from CSV
+// const loginData = parse(fs.readFileSync('data/loginData.csv', 'utf-8'), {
+//   columns: true,
+//   skip_empty_lines: true
+// });
+
 const loginData = parse(fs.readFileSync('data/loginData.csv', 'utf-8'), {
   columns: true,
-  skip_empty_lines: true
+  skip_empty_lines: true,
+  relax_quotes: true,
+  quote: '"',
+  escape: '"'
 });
 
 for (const data of loginData) {
