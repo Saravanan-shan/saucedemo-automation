@@ -10,14 +10,15 @@ class LoginPage extends BasePage {
   }
 
   async login(username, password) {
-    await this.usernameInput.fill('standard_user');
-    await this.passwordInput.fill('secret_sauce');
-    await this.loginButton.click();
+ await this.usernameInput.fill(username);
+  await this.passwordInput.fill(password);
+  await this.loginButton.click();
   }
 
   async getErrorMessage() {
-    return await this.errorMessage.textContent();
-  }
+  await this.errorMessage.waitFor({ state: 'visible', timeout: 5000 });
+  return await this.errorMessage.textContent();
+}
 
   async isErrorVisible() {
     return await this.errorMessage.isVisible();

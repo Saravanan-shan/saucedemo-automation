@@ -42,7 +42,7 @@ for (const data of loginData) {
         });
       } else {
         await test.step('Validate error', async () => {
-          expect(await loginPage.isErrorVisible()).toBe(false);
+          expect(await loginPage.isErrorVisible()).toBe(true);
           expect(await loginPage.getErrorMessage()).toBe(data.errorMessage);
         });
       }
