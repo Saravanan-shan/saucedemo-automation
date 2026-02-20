@@ -24,7 +24,8 @@ test('Add and remove products from cart', async ({ page }) => {
     await inventoryPage.goToCart();
     expect(await cartPage.getUrl()).toContain('/cart.html');
     expect(await cartPage.getItemCount()).toBe(2);
-    // Validate specific product (hardcode expected for demo; make dynamic if needed)
+
+    
     expect(await cartPage.getProductName(0)).toBe('Sauce Labs Backpack');
     expect(await cartPage.getProductPrice(0)).toBe('$29.99');
   });
@@ -32,8 +33,7 @@ test('Add and remove products from cart', async ({ page }) => {
   await test.step('Remove product and verify', async () => {
     await cartPage.removeItem(0);
     expect(await cartPage.getItemCount()).toBe(1);
-    // Badge should update (navigate back if needed, but site updates in place)
+    
   });
 });
 
-// Bonus: Add more tests, e.g., add one product, remove all, validate prices

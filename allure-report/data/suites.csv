@@ -1,2 +1,7 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","1430","basic test","chromium","2026-02-19","passed","2026-02-19","","firstproject.spec.js","",""
+"","3147","should handle login","chromium","2026-02-19","passed","2026-02-19","Login: negative_locked","login.spec.js","",""
+"","2892","should handle login","chromium","2026-02-19","passed","2026-02-19","Login: positive","login.spec.js","",""
+"","3179","basic test","chromium","2026-02-19","passed","2026-02-19","","firstproject.spec.js","",""
+"","3813","should handle login","chromium","2026-02-19","passed","2026-02-19","Login: negative_invalid","login.spec.js","",""
+"","4462","Add and remove products from cart","chromium","2026-02-19","passed","2026-02-19","","cart.spec.js","",""
+"","3507","should handle login","chromium","2026-02-19","passed","2026-02-19","Login: edge_empty","login.spec.js","",""

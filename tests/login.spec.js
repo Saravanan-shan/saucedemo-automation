@@ -2,13 +2,8 @@ const { test, expect } = require('@playwright/test');
 const LoginPage = require('../pages/LoginPage');
 const InventoryPage = require('../pages/InventoryPage');
 const fs = require('fs');
-const { parse } = require('csv-parse/sync');  // For data-driven bonus
+const { parse } = require('csv-parse/sync');  // For data-driven 
 
-// Bonus: Data-driven from CSV
-// const loginData = parse(fs.readFileSync('data/loginData.csv', 'utf-8'), {
-//   columns: true,
-//   skip_empty_lines: true
-// });
 
 const loginData = parse(fs.readFileSync('data/loginData.csv', 'utf-8'), {
   columns: true,
@@ -37,7 +32,7 @@ for (const data of loginData) {
           const inventoryPage = new InventoryPage(page);
           expect(await inventoryPage.getUrl()).toContain('/inventory.html');
           expect(await inventoryPage.getTitle()).toBe('Swag Labs');
-          // Add more: Check inventory loaded
+      
           await expect(inventoryPage.addToCartButtons.first()).toBeVisible();
         });
       } else {

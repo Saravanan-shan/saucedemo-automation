@@ -22,6 +22,6 @@ module.exports = defineConfig({
   },
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-    // Add more browsers if needed
+    
   ],
 });
